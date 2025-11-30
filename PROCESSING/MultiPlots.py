@@ -10,6 +10,7 @@ from io import StringIO
 from mpl_toolkits.axes_grid1 import host_subplot
 from matplotlib.ticker import FuncFormatter, MaxNLocator
 import mpl_toolkits.axisartist as AA
+
 def gaussian(x, A, mu, sigma):
     """Gaussian function for fitting."""
     return A * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
