@@ -1,0 +1,375 @@
+\documentclass[11pt,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{caption}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{hyperref}
+\usepackage{placeins} %para el floatbarrier
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}
+\usepackage[a4paper,top=2.5cm, bottom=2.5cm, left=2cm, right=1.6cm]{geometry}
+\setlength{\marginparwidth}{2cm}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{units}
+\usepackage[shortlabels]{enumitem}
+\usepackage{float}
+\usepackage{blindtext}
+\usepackage{microtype}
+\usepackage{makecell}
+\usepackage{lettrine}
+\usepackage{titling}
+\usepackage{booktabs}
+\usepackage{ragged2e}
+\usepackage{cuted}
+\usepackage{authblk}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{lipsum}
+%pa que pueda numerar dentro de align*
+%\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\usepackage[normalem]{ulem}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{cancel}
+\usepackage{lmodern}%get scalable font
+\usepackage{dsfont}
+\usepackage{lipsum}
+\usepackage{relsize}
+\usepackage{comment}
+\usepackage{physics} % para la notacion bra y ket
+\usepackage{mathtools} % para hacer la flecha en ambas direcciones
+\usepackage{tablefootnote}
+%\usepackage{gensymb} % para el simbolo °
+\usepackage{derivative}%ecuaciones diferenciales de grado n usar \odv[n]{f}{x} y parciales de grado n \pdv[n]{f}{x}
+\setlist[itemize]{noitemsep}
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\normalfont\bfseries}
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape}
+\usepackage{titlesec}% Allows customization of titles
+
+\titleformat{\section}[hang]{\large\centering}{\thesection.}{1em}{} % Change the look of the section titles
+
+\titleformat{\subsubsection}[block]{\large}{\thesubsubsection.}{1em}{} % Change the look of the subsubsection titles
+
+% Allows customization of titles
+\usepackage[labelfont=bf,textfont=it]{caption}
+\usepackage{subcaption}
+\setlength{\parindent}{0pt}
+
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{}
+% Change the look of the section titles
+\setlength{\droptitle}{-4\baselineskip}
+% Move the title up
+\usepackage{hyperref}
+\usepackage{listings}
+\hypersetup{
+    colorlinks=true,
+    citecolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    allcolors=blue
+}
+
+\usepackage{cleveref}
+\usepackage[
+	backend = biber,
+	bibencoding = utf8,
+	sorting = none,
+        style = apa
+]{biblatex}
+% \usepackage[backend=bibtex]{biblatex}
+\newcommand{\angstrom}{\textup{\AA}}
+\addbibresource{bibliography.bib}
+
+%simbolos del thanks
+\makeatletter 	  	 	
+\renewcommand*{\@fnsymbol}[1]{\ensuremath{\ifcase#1\or *\or \dagger\or \ddagger\or
+    \mathsection\or \mathparagraph\or \|\or **\or \dagger\dagger
+    \or \ddagger\ddagger \else\@ctrerr\fi}}
+\makeatother
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\usepackage{appendix}
+
+\raggedbottom
+
+
+
+\renewcommand{\maketitlehookd}{
+\begin{abstract}
+\vspace{0,5cm}
+This work presents a comprehensive characterization of the ThomX electron beam and accelerator control system. We measure key beam parameters including charge and energy as functions of RF phase in the electron gun, and perform detailed energy diagnostics using steerer and dipole magnets in the linear accelerator. We reconstruct the beam emittance and beam matrix, and systematically study their dependence on RF phase, attenuation, and charge. These measurements provide essential parameters for optimizing ThomX machine performance and beam quality.
+
+\textbf{Key words:} Beam characterization, Emittance measurement, RF phase dependence, Linear accelerator diagnostics, ThomX accelerator.
+\end{abstract}
+}
+
+\title{{\huge{Beam characterization of the ThomX accelerator}}}
+\author[1]{Santiago Martínez Sáenz\thanks{santiago-martinez.saenz@universite-paris-saclay.fr}} 
+\affil[1]{Université Paris-Saclay, Orsay, France.}
+
+% \renewcommand\Authands{ and }
+
+\renewcommand\Authands{, }
+
+\date{\today}
+
+\addbibresource{bibliography.bib}
+
+\begin{comment}
+\end{comment}
+
+
+
+
+\begin{document}
+
+\maketitle
+
+
+
+
+
+
+
+\begin{section}{Introduction}
+The present experience consists in the measurement of electronic properties of superconducting iron pnictide compounds, i.e. compounds in the Ba(Fe$_{1-x}$Co$_x$)$_2$As$_2$ family. The high value for the critical temperature in this family of materials (T=55K) and the magnetic nature of the matallic parent Fe makes this materials a matter of interest. Iron pnictides are compounds consisting of a stacking of Iron-Arsenic planes. The core structural feature for this family of materials is a square planar arrangement of Fe ions tetrahedrally coordinated by pnictogen or chalcogen atoms from the 15th and 16th groups. This arrangement gives rise to their special electronic and magnetic properties. Parent compounds are antiferromagnetic, with a coupled orthorhombic distortion,  suppression of the long range magnetic order through doping leads to superconducting behaviour, see \ref{fig:pnictidesphase}. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{pnictideTvsX.png}
+    \caption{Temperature-Nominal content $x$ for superconducting Iron pnictides Ba(Fe$_{1-x}$Co$_x$)$_2$As$_2$.}
+    \label{fig:pnictidesphase}
+\end{figure}
+
+Iron pnictides enter a superconducting phase through unconventional electron pairing mechanisms. Electrons are paired via antiferromagnetic fluctuations which enhance the electron couplings opposite to the BCS phonon-electron coupling seen in conventional superconducting materials(\cite{Matsuda}).
+
+This superconducting state is described by an s$\pm$ pairing symmetry. For this particular state, superconducting gap exhibits opposite signs on different regions along the fermi surface, facilitated by repulsive interactions mediated by the spin antiferromagnetic fluctuations.
+
+
+
+
+
+\end{section}
+\begin{section}{Experimental set-up}
+In order to reach temperatures below the critical value, of the order of tens of K, the sample needs to be cooled using a liquid helium cryostat. This consists of an inner "cold finger" enclosed by two outer shells that shield it from thermal radiation from the room. The intermediate stage reaches temperatures of about 60 K, a factor 5 smaller than room temperature, which results in a decrease of a factor $5^4$ of radiated power in the Stephan's law. One has to be careful of the fact that copper cables are also good thermal conductors, so they have to be wired around the copper part of the cold finger to be cooled to law temperatures before reaching the sample holder, placed on the "cold head". The connections between the sample holder and the samples are made of thin gold, which has optimal flexibility, useful at such small sizes, and holds to weldings better than copper. The sample holder, made of gold-plated copper, is protected from short-circuiting by a thin layer of paper glued to the surface, which insulates electrically but not thermally. Liquid helium extracts heat from the system, with a thermodynamic cycle, similarly to refrigerant gases contained in fridges, but at lower temperatures. Following the comparison with a fridge, the pump is substituted her by a piston to induce compression and decompression phases, and the contact with the thermal reservoir is realised using water. Conversely, it is also possible to speed up the spontaneous increase of temperature of the sample by making current pass through a resistance placed near the cold head.\\
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{IMG_8058.jpg}
+    \caption{Interior of the cryostat}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{IMG_8059.jpg}
+    \caption{Sample holder}
+    \label{fig:enter-label}
+\end{figure}
+The measurement of temperature is obtained using a Scientific instrument M9700 temperature controller with a silicon p-n junction head glued near the sample, close enough to be able to ignore the temperature gradient between it and the sample, but far enough to avoid compromising it's integrity.  The temperature controller also has a second probe, in contact with the cold finger. The difference in temperature measured by the two probes shows that there is a thermal inertia of the components, which results in the aforementioned thermal gradient. At the end the numerical values should reassure us on the validity of our approximations.\\
+
+Resistivity is measured indirectly from voltage and current measurements, connected in a 4-point probe fashion as illustrated in figure \ref{fourpoints}. Two wires are connected to a current generator and the other two to a voltmeter. This allows to probe small resistances without having to worry about the influence of the parasite resistance of cables and contacts (see \cite{fourprobecit}). The four wires are connected to a Keithley source meter. This latter and the temperature controller are connected to the lab computer for data acquisition using the software Labview. Two metal surfaces put in contact create a difference of electric potential at the interface, which is big enough to disturb the measure taken by the voltmeter. To avoid this effect, the current source works in "offset compensation" mode, supplying a square wave centred at 0 while the voltmeter evaluates the difference between the maximum and minimum values, for which the interface contribution cancels out. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=.25]{Capture d’écran 2024-12-19 134018.png}
+    \caption{Four point probe for resistivity measurements. \small{taken from \cite{fourprobecit}}}
+    \label{fourpoints}
+\end{figure}
+\end{section}
+\begin{section}{Methods}
+In this study we measure the temperature dependence of the resistivity of various samples of Ba(Fe$_{1-x}$Co$_x$)$_2$As$_2$ crystals with different cobalt $x$-doping values to be determined from the measurement of the dependence of the resistivity on temperature. Unlike conventional metals, superconductors exhibit a discontinuity in this dependence at a critical temperature. The critical temperatures for the samples are expected to be of the order of 10K at most. Therefore, the measurement is prone to noise coming from thermal fluctuations and thermal transfer processes. To avoid these impurities in the measurements, the sample is set in vacuum using a primary pump, taking the sample and its surroundings to 10$^{-1}$Pa. In order to take the sample to low temperatures required for this study, the helium gas cryostat ARS is used. This also reduces the number of thermally interacting atoms with the sample, thus a secondary pump is no longer of use. The measurements will be done in two thermal channels, the cooling channel when the temperature for the sample is decreasing and the warming channel when the temperature of the sample is rising. Using a COM interphase and the software LABView the resistivity data from the Keithley current source-meter from and the temperature data from the temperature controller (M9700) is recorded in a data file for each sample and for each channel. Data is analized and fitted using python numpy.
+
+Critical temperatures are shown in the data as first order transitions, that means that the resistivity exhibits a discontinuous change in the first derivative as a function of the temperature. By extracting numerically the points where the resistivity gradient encounters poles, we extract the values for these critical temperatures. 
+
+\end{section}
+\begin{section}{Results and discussion}
+\subsection{Results}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{Results/cooling_samp1_headA.pdf}
+        \caption{Results of resistance as a function of temperature for sample 1 in head A in the cooling channel.}
+        \label{fig:cooling_samp1_A}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{Results/warming_samp1_headA.pdf}
+        \caption{Results of resistance as a function of temperature for sample 1 in head A in the warming channel.}
+        \label{fig:warming_samp1_A}
+    \end{figure}
+
+    \begin{table}[h!]
+    \centering
+    \begin{tabular}{lcc}
+    \toprule
+    \textbf{Measurement} & \textbf{Tc (K)} \\ 
+    \midrule
+    Cooling & 22.43 \\ 
+    Warming & 24.55 \\ 
+    \midrule
+    \textbf{Average} & \textbf{23.49} \\ 
+    \bottomrule
+    \end{tabular}
+    \caption{Critical temperature values for sample 1 in head A.}
+    \label{tab:samp1_A_temps}
+    \end{table}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{Results/cooling_samp2_headA.pdf}
+        \caption{Results of resistance as a function of temperature for sample 2 in head A in the cooling channel.}
+        \label{fig:cooling_samp2_A}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{Results/warming_samp2_headA.pdf}
+        \caption{Results of resistance as a function of temperature for sample 2 in head A in the warming channel.}
+        \label{fig:warming_samp2_A}
+    \end{figure}
+    \begin{table}[h!]
+    \centering
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Measurement} & \textbf{Tc$_1$ (K)} &\textbf{Tc$_2$ (K)} \\ 
+    \midrule
+    Cooling & 24.44 &  133.25\\ 
+    Warming & 22.41 &  135.64\\ 
+    \midrule
+    \textbf{Average} & \textbf{23.42} & \textbf{134.44} \\ 
+    \bottomrule
+    \end{tabular}
+    \caption{Critical temperature values for sample 2 in head A.}
+    \label{tab:samp2_A_temps}
+    \end{table}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{Results/cooling_samp_headB.pdf}
+        \caption{Results of resistance as a function of temperature for the sample in head B in the cooling channel.}
+        \label{fig:cooling_samp_B}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{Results/warming_samp_headB.pdf}
+        \caption{Results of resistance as a function of temperature for the sample in head B in the warming channel.}
+        \label{fig:warming_samp_B}
+    \end{figure}
+    \begin{table}[h!]
+    \centering
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Measurement} & \textbf{Tc$_1$ (K)} &\textbf{Tc$_2$ (K)} \\ 
+    \midrule
+    Cooling & 18.44 &  132.85\\ 
+    Warming & 19.08 &  134.41\\ 
+    \midrule
+    \textbf{Average} & \textbf{18.76} & \textbf{133.63} \\ 
+    \bottomrule
+    \end{tabular}
+    \caption{Critical temperature values for sample in head B.}
+    \label{tab:samp_B_temps}
+    \end{table}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{Results/cooling_samp_headC.pdf}
+        \caption{Results of resistance as a function of temperature for the sample in head C in the cooling channel.}
+        \label{fig:cooling_samp_C}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{Results/warming_samp_headC.pdf}
+        \caption{Results of resistance as a function of temperature for the sample in head C in the warming channel.}
+        \label{fig:warming_samp_C}
+    \end{figure}
+
+    \begin{table}[h!]
+    \centering
+    \begin{tabular}{lccc}
+    \toprule
+    \textbf{Measurement} & \textbf{Tc$_1$ (K)} &\textbf{Tc$_2$ (K)} \\ 
+    \midrule
+    Cooling & 31.02 &  95.82\\ 
+    Warming & 22.83 &  97.17\\ 
+    \midrule
+    \textbf{Average} & \textbf{26.92} & \textbf{96.49} \\ 
+    \bottomrule
+    \end{tabular}
+    \caption{Critical temperature values for sample in head C.}
+    \label{tab:samp_C_temps}
+    \end{table}
+
+    Using the mean values for Tc, and looking at the phase diagram (\ref{fig:pnictidesphase}) we might estimate the doping value $x$ for the iron pnictides Ba(Fe$_{1-x}$Co$_x$)$_2$As$_2$. 
+    \begin{table}[h!]
+    \centering
+    \begin{tabular}{lc}
+    \toprule
+    \textbf{Sample} & \textbf{Estimated $x$} \\
+    \midrule
+    Sample 1 (Head A) & Optimal ($x \sim 0.05$) \\
+    Sample 2 (Head A) & Partial ($x \sim 0.04$) \\
+    Sample (Head B)   & Partial ($x \sim 0.04$) \\
+    Sample (Head C)   & Intermediate ($x \sim 0.05$) \\
+    \midrule
+    \end{tabular}
+    \caption{Estimated doping values ($x$) for each sample based on Tc values and the phase diagram of iron pnictides (\ref{fig:pnictidesphase}).}
+    \label{tab:x_values}    
+    \end{table}
+
+    Knowing that the resistivity of the samples at 300 K is $\rho =340 \mu \Omega $cm, the density is $D=6.48 g/cm^3$ and the lengths of the samples respectively $L_1=1.1$mm and $L_2=1.3$mm, we can combine the definition of density as $D=\frac{m}{S L}$ with that of resistivity as $\rho=\frac{RS}{L}$ to get the mass $m=\frac{D\rho L^2}{R}$. Using the measured resistances at room temperature, the following mass values were determined:
+
+    \begin{table}[H]
+    \centering
+    \begin{tabular}{l c}
+    \toprule
+    \textbf{Sample} & \textbf{Mass (kg)} \\ 
+    \midrule
+    $m_{A1}$ & $2.5 \times 10^{-7}$ \\ 
+    $m_{A2}$ & $2.4 \times 10^{-7}$ \\ 
+    $m_B$ & $1.0 \times 10^{-7}$ \\ 
+    $m_C$ & $2.1 \times 10^{-7}$ \\ 
+    \bottomrule
+    \end{tabular}
+    \caption{Masses of the two samples on head A and of the samples on heads B and C.}
+    \label{tab:my_label}
+    \end{table}
+
+    \subsection{Discussion}
+    Taking to account the doping in the material and the phase diagram (\ref{fig:pnictidesphase}), The Tc$_1$ reflects the superconducting phase transition dependence on the doping value of Co $x$, while Tc$_2$ reflects the suppression or shift of magnetic/structural transitions as doping progresses. 
+    
+    There has been observed a difference in the critical temperatures values Tc$_i$ between the cooling and warming channels across all samples. For the sample 1 in head A, there is a difference of 9\% between the critical temperatures in both channels in the only phase transition corresponding to the superconducting transition. For sample 2 in head A the difference in the superconducting critical temperatures is 8\% and in the antiferromagnetic transitions is 2\%. For the sample in head B the difference in the superconducting critical temperatures is 3\% and in the antiferromagnetic transitions is 1\%. For the sample in head C the difference in the superconducting critical temperatures is 30\% and in the antiferromagnetic transitions is 1\%.
+    
+    For sample 1 in head A, there was observed only one phase transition at the mean critical temperature across warming and cooling channels of Tc = 23.9 K. Looking at the phase diagram \ref{fig:pnictidesphase}, the sample is in the optimally doped regime, where doping value $x$ is near the critical doping level for achieving the maximum Tc for a superconductor phase transition. For sample 2 in head A, there were observed two phase transitions at the critical (mean across channels) temperatures Tc$_1$ = 23.42 K and Tc$_2$ = 134.44 K, the presence of two distinct phase transitions suggests partial doping, the material still exhibits superconducting phase transition but still exhibits features of the parent compound's magnetic or structural transitions above the superconductor phase critical temperature. For the sample in head B, there were observed two phase transitions at the critical temperatures Tc$_1$ = 18.76 K and Tc$_2$ = 133.63 K, the presence of two distinct phase transitions suggests partial doping, again showing similar features to sample 2 in head A. Also the lower temperature for the superconductive transition suggests a smaller doping value $x$. For the sample in head C, there were observed two phase transitions at the critical temperatures Tc$_1$ = 26.92 K and Tc$_2$ =96.49 K, the presence of two distinct phase transitions suggests partial doping, again showing similar features to sample 2 in head A and sample in head B. The doping value $x$ is thus intermediate in between the sample 1 in head A and the sample in head B because of the intermediate values of the critical temperatures for superconducting transitions and antiferromagnetic transitions.
+
+    For samples other than sample 1 in head A, the average values of Tc$_1$ around 20 K suggests that the doping values $x$ fall just below the optimal value for maximal superconducting critical temperature. This is consistent with the mixed superconducting and antiferromagnetic properties, the later which are inherited from the parent compound.
+    
+     
+\end{section}
+\begin{section}{Conclusions}
+
+The analysis of the critical temperature (Tc) values for different samples of iron pnictides Ba(Fe$_{1-x}$Co$_x$)$_2$As$_2$ provides important insights into the relationship between doping levels $x$ and superconducting properties. The observed variation in Tc suggests that doping significantly influences the electronic and magnetic structural phases of the material.
+
+The samples taken into account exhibit differences in critical temperatures for phase transitions, particularly due to thermal  hysteresis effects shown in iron pnictides (\cite{IronHysteresis}). The superconducting phase transition can be slightly shifted due to different factors like pinning effects or defects in the structure. In the cooling channel, these two effects may be more pronounced because the material is entering the superconducting state and flux pinning can occur more easily. Upon warming, the pinning forces might become less significant, allowing the superconductivity to be more stable at a higher temperature. Additionally, when a material gains thermal energy, its particles increase their energies and in turn move more freely. This allows the system to explore different states more easily and reach a more stable equilibrium configuration. In the case of superconductors, warming provides the energy needed for the system to overcome local obstacles, such as impurities or lattice defects, that could otherwise trap it in a lower-energy state. Opposed to the cooling channel, as the temperature lowers, the energy lowers and the system may stay in a metastable level more easily other than the ground state as inhomogeneities and local variations in the material become relevant. 
+
+The relationship between doping ($x$) and the critical temperature (Tc) in the iron pnictides reveals a clear connection between the phases observed and the doping level. For sample 1 in Head A, the single superconducting transition suggests an optimal doping level where the material reaches the peak superconducting transition temperature (Tc) for this phase. This is consistent with the well-established superconducting dome in iron pnictides. The lack of competing phases indicates that the doping level is optimal for the superconducting phase, and further doping would likely suppress superconductivity or lead to other competing phases. For sample 2 in Head A and sample in head B, the presence of two distinct phase transitions suggests a partial doping regime. Here, $x$ is close to the optimal doping level but still exhibits features of the parent compound’s magnetic and structural phases. The coexistence of superconductivity and competing magnetic/structural phases indicates that the material is in a transitional doping regime, where the superconducting phase is emerging but not fully stabilized. For sample in Head C, the doping level is intermediate between the optimally doped and suboptimally doped regimes. The sample shows strong superconducting behavior but still retains some magnetic/structural features, indicating that doping at this level is sufficiently high to suppress the parent compound's structural/magnetic order but not enough to fully optimize the superconducting transition.
+
+Overall, for iron pcintides doped with Cobalt, the characterization of the samples by obtaining Tc values from the measurement of resistivity in a temperature sensitive set-up offers insight into the structural phase of the material dependant on the doping of the material. At optimal doping, the superconducting transition temperature is maximized, while deviations from optimal doping lead to the coexistence of superconductivity and competing magnetic/structural phases or the suppression of the superconducting phase overall. These findings reinforce the importance of precise control over doping to optimize superconducting properties in iron pnictides.
+
+
+    
+\end{section}
+
+\printbibliography
+
+\appendix
+
+
+\end{document}

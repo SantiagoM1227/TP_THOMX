@@ -1,0 +1,253 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/apasortcite//global/global/global}
+    \entry{Matsuda}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cf7d7c4737ecfc8d61bb986ca46ab092}{%
+           family={Matsuda},
+           familyi={M\bibinitperiod},
+           given={Yuji},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Kyoto University, Kyoto, Japan}%
+      }
+      \strng{namehash}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{fullhash}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{fullhashraw}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{bibnamehash}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{authorbibnamehash}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{authornamehash}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{authorfullhash}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{authorfullhashraw}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Lecture Notes}
+      \field{note}{Department of Physics, condensed matter physics focus}
+      \field{title}{Physics of iron-based high-temperature superconductors}
+      \field{year}{2014}
+    \endentry
+    \entry{fourprobecit}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=015e2b1090834e325b328ecb461ca149}{%
+           family={Ossila},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{015e2b1090834e325b328ecb461ca149}
+      \strng{fullhash}{015e2b1090834e325b328ecb461ca149}
+      \strng{fullhashraw}{015e2b1090834e325b328ecb461ca149}
+      \strng{bibnamehash}{015e2b1090834e325b328ecb461ca149}
+      \strng{authorbibnamehash}{015e2b1090834e325b328ecb461ca149}
+      \strng{authornamehash}{015e2b1090834e325b328ecb461ca149}
+      \strng{authorfullhash}{015e2b1090834e325b328ecb461ca149}
+      \strng{authorfullhashraw}{015e2b1090834e325b328ecb461ca149}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Four-probe method}
+      \verb{urlraw}
+      \verb https://www.ossila.com/pages/sheet-resistance-theory
+      \endverb
+      \verb{url}
+      \verb https://www.ossila.com/pages/sheet-resistance-theory
+      \endverb
+    \endentry
+    \entry{IronHysteresis}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=23f2de44942ef4e541351666a5746f5d}{%
+           family={Brück},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=edf06d7da6e5af07c721c40fb8a8182c}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Thanh\bibnamedelima Trung},
+           giveni={T\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f042b8b6f54a168981a1ece8bb3bfe2b}{%
+           family={Ou},
+           familyi={O\bibinitperiod},
+           given={Zhiqiang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c4718bc5cca772fcce6968f9a9a34f7}{%
+           family={Buschow},
+           familyi={B\bibinitperiod},
+           given={K.H.J.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d126be3713b00bc788ca7ee9abb9b580}
+      \strng{fullhash}{977fcd75b47031b0f6e6ac2e96404185}
+      \strng{fullhashraw}{977fcd75b47031b0f6e6ac2e96404185}
+      \strng{bibnamehash}{977fcd75b47031b0f6e6ac2e96404185}
+      \strng{authorbibnamehash}{977fcd75b47031b0f6e6ac2e96404185}
+      \strng{authornamehash}{d126be3713b00bc788ca7ee9abb9b580}
+      \strng{authorfullhash}{977fcd75b47031b0f6e6ac2e96404185}
+      \strng{authorfullhashraw}{977fcd75b47031b0f6e6ac2e96404185}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scripta Materialia}
+      \field{month}{09}
+      \field{title}{Enhanced magnetocaloric effects and tunable thermal hysteresis in transition metal pnictides}
+      \field{volume}{67}
+      \field{year}{2012}
+      \field{pages}{590\bibrangedash 593}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1016/j.scriptamat.2012.04.037
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Matsuda}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cf7d7c4737ecfc8d61bb986ca46ab092}{%
+           family={Matsuda},
+           familyi={M\bibinitperiod},
+           given={Yuji},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Kyoto University, Kyoto, Japan}%
+      }
+      \strng{namehash}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{fullhash}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{fullhashraw}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{bibnamehash}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{authorbibnamehash}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{authornamehash}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{authorfullhash}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \strng{authorfullhashraw}{cf7d7c4737ecfc8d61bb986ca46ab092}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Lecture Notes}
+      \field{note}{Department of Physics, condensed matter physics focus}
+      \field{title}{Physics of iron-based high-temperature superconductors}
+      \field{year}{2014}
+    \endentry
+    \entry{fourprobecit}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=015e2b1090834e325b328ecb461ca149}{%
+           family={Ossila},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{015e2b1090834e325b328ecb461ca149}
+      \strng{fullhash}{015e2b1090834e325b328ecb461ca149}
+      \strng{fullhashraw}{015e2b1090834e325b328ecb461ca149}
+      \strng{bibnamehash}{015e2b1090834e325b328ecb461ca149}
+      \strng{authorbibnamehash}{015e2b1090834e325b328ecb461ca149}
+      \strng{authornamehash}{015e2b1090834e325b328ecb461ca149}
+      \strng{authorfullhash}{015e2b1090834e325b328ecb461ca149}
+      \strng{authorfullhashraw}{015e2b1090834e325b328ecb461ca149}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Four-probe method}
+      \verb{urlraw}
+      \verb https://www.ossila.com/pages/sheet-resistance-theory
+      \endverb
+      \verb{url}
+      \verb https://www.ossila.com/pages/sheet-resistance-theory
+      \endverb
+    \endentry
+    \entry{IronHysteresis}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=23f2de44942ef4e541351666a5746f5d}{%
+           family={Brück},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=edf06d7da6e5af07c721c40fb8a8182c}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Thanh\bibnamedelima Trung},
+           giveni={T\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f042b8b6f54a168981a1ece8bb3bfe2b}{%
+           family={Ou},
+           familyi={O\bibinitperiod},
+           given={Zhiqiang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c4718bc5cca772fcce6968f9a9a34f7}{%
+           family={Buschow},
+           familyi={B\bibinitperiod},
+           given={K.H.J.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d126be3713b00bc788ca7ee9abb9b580}
+      \strng{fullhash}{977fcd75b47031b0f6e6ac2e96404185}
+      \strng{fullhashraw}{977fcd75b47031b0f6e6ac2e96404185}
+      \strng{bibnamehash}{977fcd75b47031b0f6e6ac2e96404185}
+      \strng{authorbibnamehash}{977fcd75b47031b0f6e6ac2e96404185}
+      \strng{authornamehash}{d126be3713b00bc788ca7ee9abb9b580}
+      \strng{authorfullhash}{977fcd75b47031b0f6e6ac2e96404185}
+      \strng{authorfullhashraw}{977fcd75b47031b0f6e6ac2e96404185}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scripta Materialia}
+      \field{month}{09}
+      \field{title}{Enhanced magnetocaloric effects and tunable thermal hysteresis in transition metal pnictides}
+      \field{volume}{67}
+      \field{year}{2012}
+      \field{pages}{590\bibrangedash 593}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1016/j.scriptamat.2012.04.037
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
